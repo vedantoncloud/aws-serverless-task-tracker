@@ -25,3 +25,8 @@ Frontend (S3 + CloudFront)
 - AWS IAM (Access control)
 
 ## 📂 Repository Structure
+
+## 📌 Internship Context
+This project was developed as part of the **Cloud Engineering Internship at HEPro**.
+## 👤 Author
+**Vedant Mishra**
