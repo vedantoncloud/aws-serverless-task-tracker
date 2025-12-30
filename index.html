@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="title">Task Tracker</h1>
+
+    <div class="card">
+        <p>Login using AWS Cognito</p>
+        <button id="loginBtn" class="btn">Login with Cognito</button>
+    </div>
+
+    <script>
+        // ===== FINAL WORKING CONFIG =====
+        const CLIENT_ID = "1fd50j64uhk42n5t99i1ue14qn";
+        const DOMAIN = "ap-south-1cmvcqic8k.auth.ap-south-1.amazoncognito.com";
+        const REDIRECT = "https://d1he6xvx8g5q1v.cloudfront.net";
+
+        document.getElementById("loginBtn").onclick = () => {
+            const loginUrl =
+                `https://${DOMAIN}/login?client_id=${CLIENT_ID}` +
+                `&response_type=code&scope=email+openid+profile` +
+                `&redirect_uri=${encodeURIComponent(REDIRECT)}`;
+
+            window.location.href = loginUrl;
+        };
+    </script>
+
+</body>
+</html>
